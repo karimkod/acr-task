@@ -11,6 +11,8 @@ RUN dotnet restore
 COPY ./. ./
 RUN dotnet publish -c release -o /app --no-restore
 
+RUN echo "Build completed successfully."
+
 # final stage/image
 FROM mcr.microsoft.com/dotnet/aspnet:9.0
 WORKDIR /app
