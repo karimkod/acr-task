@@ -13,6 +13,8 @@ RUN dotnet publish -c release -o /app --no-restore
 
 RUN echo "Build completed successfully."
 
+RUN echo "Starting the application..."
+
 # final stage/image
 FROM mcr.microsoft.com/dotnet/aspnet:9.0
 WORKDIR /app
